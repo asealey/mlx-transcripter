@@ -1,0 +1,23 @@
+[project]
+name = "mlx-transcripter"
+version = "0.3.0"
+description = "Local audio/video transcription on Apple Silicon (mlx-whisper), with Finder Quick Actions and a progress window"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Adam Sealey" }]
+requires-python = ">=3.12"
+dependencies = [
+    "mlx-whisper>=0.4.3",
+]
+
+[project.urls]
+Repository = "https://github.com/asealey/mlx-transcripter"
+
+[project.scripts]
+mlx-transcribe = "mlx_transcripter:main"
+transcribe = "mlx_transcripter:main"  # short alias
+
+[build-system]
+requires = ["uv_build>=0.11,<0.12"]
+build-backend = "uv_build"
