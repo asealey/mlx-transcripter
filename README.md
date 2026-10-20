@@ -59,7 +59,7 @@ mlx-transcribe --format json,txt --out transcripts *.mp3  # batch into a folder
 |---|---|
 | `--format` | any of `txt`, `srt`, `json` (timestamped segments), comma-separated; default `txt` |
 | `--out DIR` | write here instead of next to each file |
-| `--force` | overwrite existing outputs (otherwise files with outputs are skipped) |
+| `--force` | overwrite existing outputs (otherwise a file is skipped once all its requested formats exist) |
 | `--language` | language code, default `en`; `auto` to detect |
 | `--model` | any mlx-community Whisper repo, e.g. `mlx-community/whisper-base-mlx` for speed |
 | `--progress-window`, `--notify` | the floating progress bar and the done notification + chime |
